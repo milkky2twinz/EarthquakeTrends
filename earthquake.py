@@ -14,11 +14,11 @@ with open('thailand_earthquake_stat_database.csv', 'r') as database:
     for i in detail:
         lat_lon = [float(a) for a in i[1].split(', ')]
         lat, lon = lat_lon
-        popup1 = """City: %s <br> \
-Latitude: %s, Longitude: %s <br> \
+        popup1 = """Location: %s <br> \
+Epicenter: %s, %s <br> \
 Date: %s <br> \
 Time: %s <br> \
-M/I: %s <br> \
+Magnitude/Intensity: %s <br> \
 Detail: %s""" % (i[0], lat, lon, i[1], i[2], i[3], i[4])
         print('Location:', i[0])
         print('Epicenter: %s, %s' %(lat, lon))
