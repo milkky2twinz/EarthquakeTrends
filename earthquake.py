@@ -9,7 +9,6 @@ with open('thailand_earthquake_stat_database.csv', 'r') as database:
     for i in data:
         dict_city[i[0]] = dict_city.get(i[0], [])+[i[1::]]
     #print(dict_city)
-
     #Retrieval of data to use and Test data, Print detail follow input--Location
     city = input()
     detail = dict_city[city]
