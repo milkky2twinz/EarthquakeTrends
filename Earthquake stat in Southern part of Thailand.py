@@ -44,7 +44,7 @@ layout = Layout(
     ]),
     autosize=True,
     height=536,
-    title='Earthquake stat in Southern part of Thailand',
+    title='Earthquake stat in Southern part of Thailand 2004-2014',
     width=1121,
     xaxis=XAxis(
         autorange=True,
