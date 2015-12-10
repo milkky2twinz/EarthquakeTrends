@@ -1,6 +1,16 @@
+""""
+********************************************************************
+*** Earthquake stat in Indonesia that affect Thailand 2004-2014. ***
+***                 Create Graph by module "plotly"              ***
+********************************************************************
+"""
 import plotly.plotly as py
 from plotly.graph_objs import *
+
+#Login Plotly by using account username and api_key of plotly for plot graph.
 py.sign_in('milkky2twinz', 'jl493198bg')
+
+#Add data from Database for bring create graph.
 data = Data([
     Scatter(
         x=['2004-12-26', '2005-02-09', '2005-03-28', '2005-04-10', '2005-05-14', '2005-05-19', '2005-05-22', '2005-07-05', '2005-09-07', '2005-10-11', '2005-11-19', '2006-12-01', '2007-04-27', '2007-09-12', '2007-09-13', '2007-12-28', '2008-02-20', '2009-09-30', '2010-04-07', '2010-05-09', '2011-09-06', '2012-03-05', '2012-04-11', '2012-06-23', '2013-07-02'],
@@ -11,6 +21,8 @@ data = Data([
         uid='5e37c4'
     )
 ])
+
+#define layout and scope of graph.
 layout = Layout(
     annotations=Annotations([
         Annotation(
@@ -63,5 +75,8 @@ layout = Layout(
         type='linear'
     )
 )
+
+#Plot graph.
 fig = Figure(data=data, layout=layout)
+#Open graph on some browser.
 plot_url = py.plot(fig)
