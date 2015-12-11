@@ -1,6 +1,16 @@
+""""
+********************************************************************
+***   Earthquake stat in Southern part of Thailand 2004-2014.    ***
+***                 Create Graph by module "plotly"              ***
+********************************************************************
+"""
 import plotly.plotly as py
 from plotly.graph_objs import *
+
+#Login Plotly by using account username and api_key of plotly for plot graph.
 py.sign_in('bbeammor', 'wtjo8fd6hu')
+
+#Add data from Database for bring create graph.
 data = Data([
     Scatter(
         x=['2004-09-17', '2004-12-27', '2008-12-23', '2011-04-30', '2011-06-24', '2012-02-20', '2012-04-16', '2012-06-04', '2015-02-20', '2015-03-25', '2015-05-06', '2015-05-07'],
@@ -10,6 +20,8 @@ data = Data([
         uid='178361'
     )
 ])
+
+#define layout and scope of graph.
 layout = Layout(
     annotations=Annotations([
         Annotation(
@@ -59,5 +71,9 @@ layout = Layout(
         type='linear'
     )
 )
+
+#Plot graph.
 fig = Figure(data=data, layout=layout)
+
+#Open graph on some browser.
 plot_url = py.plot(fig)
